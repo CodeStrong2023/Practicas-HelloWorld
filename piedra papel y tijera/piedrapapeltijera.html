@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra Papel o Tijera</title>
+    <script>
+
+        function generarNumeroAleatorio(min, max) {
+            Math.floor(Math.random() * (max - min + 1) + min)}
+
+        // 1 será piedra, 2 será papel 3 será tijera
+        let jugador = 0
+        let pc = generarNumeroAleatorio(3,1)
+        jugador = prompt("Elige : 1 Piedra, 2 Papel, 3 Tijera")
+
+        //alert("Elige jugador"+jugador)
+        if(jugador == 1){
+            alert("Elegiste Piedra")
+        } else if(jugador == 2){
+            alert("Elegiste Papel")
+        } else if(jugador == 3){
+            alert("Elegiste Tijera")
+        } else{
+            alert("Elegiste perder")
+        }
+
+        //Combate
+        if(pc == jugador){
+            alert("Empate")
+        } else if(jugador == 1 && pc == 3){
+            alert("Ganaste")
+        } else if(jugador == 2 && pc == 1){
+            alert("Ganaste")
+        } else if(jugador == 3 && pc == 2){
+            alert("Ganaste")
+        } else {
+            alert("Perdiste")
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        Piedra Papel o Tijera
+    </h1>
+</body>
+</html>
